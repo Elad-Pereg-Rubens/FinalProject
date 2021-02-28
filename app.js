@@ -6,40 +6,14 @@ const request = require("request");
 const parser = require("body-parser");
 //
 //
-
-//AlpahVantage -
-// const cors = require("cors");
-// app.use(cors());
-// app.options("*", cors());
-
-// require("dotenv").config();
-// const timePeriod = require("./alphaVantage");
-// //
-// app.post("/stock", cors(), async (req, res) => {
-//     const body = JSON.parse(JSON.stringify(req.body));
-//     const { ticker, type } = body;
-//     console.log("stocks-api.js 20 | body", body.ticker);
-//     const request = await fetch(
-//         `https://www.alphavantage.co/query?function=${timePeriod(
-//             type
-//         )}&symbol=${ticker}&apikey=${process.env.ALPHA_VANTAGE_API_KEY}`
-//     );
-//     const data = await request.json();
-//     res.json({ data: data });
-// });
-//
 //
 
 //middleware - parser
 app.use(parser.urlencoded({ extended: false }));
 //
 //
-//API - SlimFin web-api - https://simfin.com/data/api
-//API key = adNorRHSOTmgTnZxraHyTwOLJBrlTZvj
 
 // export to server.js
-//API *public* KEY = pk_875d6d7ec4424488b9db96d0437c364f - export to server.js
-//https://iexcloud.io/console/tokens
 //API request
 function getDataApi(callbackAPI, usrSearchResult) {
     // request(
