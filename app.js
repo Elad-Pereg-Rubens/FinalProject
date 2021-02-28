@@ -10,6 +10,9 @@ const parser = require("body-parser");
 app.use(parser.urlencoded({ extended: false }));
 //
 //
+
+//
+// export to server.js
 //API *public* KEY = pk_875d6d7ec4424488b9db96d0437c364f - export to server.js
 //https://iexcloud.io/console/tokens
 //API request
@@ -36,7 +39,8 @@ function getDataApi(callbackAPI, usrSearchResult) {
         }
     );
 }
-
+//
+//
 //
 //
 
@@ -72,16 +76,17 @@ app.post("/", function (req, res) {
     // console.log(apiData);
 });
 
-//ABOUT GET  page route
-app.get("/about.html", function (req, res) {
-    res.render("about");
+//overview GET  page route
+app.get("/overview.html", function (req, res) {
+    res.render("overview");
 });
 
 //static folder
 app.use(express.static(path.join(__dirname, "./public")));
 //
 //
-
+//middleware - image
+app.use(express.static("./public"));
 //
 //
 //
