@@ -1,0 +1,45 @@
+{{!-- {{searchQ}} test !<br/> --}}
+
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">{{  apiInfo.companyName  }} ({{apiInfo.symbol }}) </h4>
+  <p><strong> Symbol: </strong>{{  apiInfo.symbol }}<br/>
+
+<strong> P.Exchange: </strong>{{  apiInfo.primaryExchange }}<br/>
+</p>
+  <hr>
+
+<strong> Open: </strong>${{  apiInfo.open }}<br/>
+<strong> High: </strong>${{  apiInfo.high }}<br/>
+<strong> Low: </strong>${{  apiInfo.low}}<br/>
+{{!-- <strong> Previous Close: </strong>${{  apiInfo.previousClose  }}<br/> --}}
+<strong> Close: </strong>${{  apiInfo.close  }}<br/>
+<strong> Volume: </strong>{{  apiInfo.volume  }}<br/>
+</p>
+</div>
+
+
+
+<!--
+    without bootstrap:
+
+<h1>{{  apiInfo.companyName  }} ({{apiInfo.symbol }}) </h1>
+{{!-- <p> {{ apiInfo }}</p> --}}
+  <br/>
+{{!-- {{  apiInfo.companyName  }} ({{apiInfo.symbol }})   <br/> --}}
+<strong> Symbol: </strong>{{  apiInfo.symbol }}<br/>
+
+<strong> P.Exchange: </strong>{{  apiInfo.primaryExchange }}<br/>
+<strong> Open: </strong>${{  apiInfo.open }}<br/>
+<strong> High: </strong>${{  apiInfo.high }}<br/>
+<strong> Low: </strong>${{  apiInfo.low}}<br/>
+<strong> Previous Close: </strong>${{  apiInfo.previousClose  }}<br/>
+<strong> Close: </strong>${{  apiInfo.close  }}<br/>
+<strong> Volume: </strong>{{  apiInfo.volume  }}<br/>
+<br/>
+
+<!--
+{{#each apiInfo}}
+     {{@key}} | {{this}}      <br/>
+{{/each}}
+
+-->
