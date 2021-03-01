@@ -11,15 +11,12 @@ const parser = require("body-parser");
 //middleware - parser
 app.use(parser.urlencoded({ extended: false }));
 //
-//
 
 // export to server.js
+//https://iexcloud.io/console/tokens
 //API request
+
 function getDataApi(callbackAPI, usrSearchResult) {
-    // request(
-    //     "https://cloud.iexapis.com/stable/stock/" +
-    //         usrSearchResult +
-    //         "/quote?token=pk_875d6d7ec4424488b9db96d0437c364f",
     request(
         "https://cloud.iexapis.com/stable/stock/" +
             usrSearchResult +
@@ -39,10 +36,6 @@ function getDataApi(callbackAPI, usrSearchResult) {
     );
 }
 //
-//
-//
-//
-
 //Handlebars Middleware
 app.engine("handlebars", hb());
 app.set("view engine", "handlebars");
@@ -59,6 +52,7 @@ app.get("/", function (req, res) {
 });
 //
 //
+// session - < use
 
 //HOME - POST page Handlebars-route
 app.post("/", function (req, res) {
